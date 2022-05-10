@@ -2,6 +2,10 @@ import homeslide from "../src/img/homeslide.png";
 import homeslide1 from "../src/img/homeslide1.png";
 import homeslide2 from "../src/img/homeslide2.png";
 import hero1 from "../src/img/hero1.png";
+import dinnergown from "../src/img/dinnergown.png"
+import accessories from "../src/img/accessories.png"
+import homewears from "../src/img/homewears.png"
+
 
 export const sliderItems = [
   {
@@ -21,19 +25,19 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: dinnergown,
     title: "Dinner Gowns",
     cat: "female",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: accessories,
     title: "Accessories",
     cat: "accessories",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    img: homewears,
     title: "Home Wears",
     cat: "jeans",
   },

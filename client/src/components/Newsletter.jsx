@@ -4,59 +4,80 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
-  background-color: #fcf5f5;
+  background-color: #400909;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
   margin-bottom: 20px;
 `;
 
 const Desc = styled.div`
-  font-size: 24px;
-  font-weight: 300;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 16px;
   margin-bottom: 20px;
-  ${mobile({ textAlign: "center" })}
-
+  text-align: center;
+  ${mobile({ textAlign: "center" })};
 `;
 
 const InputContainer = styled.div`
-  width: 50%;
+  width: 350px;
   height: 40px;
+  border-radius: 12px;
   background-color: white;
   display: flex;
   justify-content: space-between;
-  border: 1px solid lightgray;
   ${mobile({ width: "80%" })}
 `;
 
 const Input = styled.input`
-  border: none;
+  border-radius: 12px;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 250;
   flex: 8;
   padding-left: 20px;
 `;
 
 const Button = styled.button`
-  flex: 1;
-  border: none;
-  background-color: teal;
-  color: white;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 250;
+  border-radius: 12px;
+  height: 40px
+  color: black;
+  padding: 10px
+`;
+
+const Nwsection = styled.div`
+  display: flex;
+  gap: 20px;
 `;
 
 const Newsletter = () => {
   return (
     <Container>
-      <Title>Newsletter</Title>
-      <Desc>Get timely updates from your favorite products.</Desc>
-      <InputContainer>
-        <Input placeholder="Your email" />
-        <Button>
-          <Send />
-        </Button>
-      </InputContainer>
+      <Title>Sign Up</Title>
+      <Desc>
+        DISCOVER EXCLUSIVE NEW COLLECTIONS
+        <br />
+        AND STAY UPDATED
+      </Desc>
+      <Nwsection>
+        <InputContainer>
+          <Input placeholder="Enter email" />
+        </InputContainer>
+        <Button>Subscribe</Button>
+      </Nwsection>
     </Container>
   );
 };

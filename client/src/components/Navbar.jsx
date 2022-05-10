@@ -1,5 +1,10 @@
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import "./Navbar.css";
+import {
+  Search,
+  ShoppingCartOutlined,
+  PersonOutlineOutlined,
+} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
@@ -51,7 +56,9 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-weight: bold;
+  font-weight: 600;
+  font-family: "Roboto";
+  font-size: 24px;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -74,35 +81,46 @@ const MenuItem = styled.div`
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Language>EN</Language>
+    <>
+      <Container>
+        <Wrapper>
+          <Left>
+            {/* <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left>
-        <Center>
-          <Logo>Hazel Grace</Logo>
-        </Center>
-        <Right>
-          <Link to="/register" style={{ textDecoration: "none" }}>
+          </SearchContainer> */}
+          </Left>
+          <Center>
+            <Logo>HAZEL GRACE</Logo>
+          </Center>
+          <Right>
+            <div className="dropdown">
+              <button className="dropbtn">
+                <PersonOutlineOutlined />
+              </button>
+              <div className="dropdown-content">
+                <a href="/register">Login</a>
+                <a href="/register">Register</a>
+              </div>
+            </div>
+            {/* <Link to="/register" style={{ textDecoration: "none" }}>
             <MenuItem>REGISTER</MenuItem>
           </Link>
           <Link to="/login" style={{ textDecoration: "none" }}>
             <MenuItem>SIGN IN</MenuItem>
-          </Link>
-          <Link to="/cart">
-            <MenuItem>
-              <Badge badgeContent={quantity} color="primary">
-                <ShoppingCartOutlined />
-              </Badge>
-            </MenuItem>
-          </Link>
-        </Right>
-      </Wrapper>
-    </Container>
+          </Link> */}
+            <Link to="/cart">
+              <MenuItem>
+                <Badge badgeContent={quantity} color="primary">
+                  <ShoppingCartOutlined />
+                </Badge>
+              </MenuItem>
+            </Link>
+          </Right>
+        </Wrapper>
+      </Container>
+    </>
   );
 };
 

@@ -25,8 +25,8 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 5px;
-  min-width: 280px;
-  height: 350px;
+  min-width: 300px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,14 +68,18 @@ const Icon = styled.div`
 `;
 
 const Price = styled.p`
-  font-size: 12px;
-  z-index: 3;
-  position: relative;
-`;
-const Pname = styled.p`
   font-size: 14px;
   z-index: 3;
   position: relative;
+  font-family: "Gibson";
+  font-weight: 250;
+`;
+const Pname = styled.p`
+  font-size: 16px;
+  z-index: 3;
+  position: relative;
+  font-family: "Gibson";
+  font-weight: 250;
 `;
 const Cont = styled.div`
   position: relative;

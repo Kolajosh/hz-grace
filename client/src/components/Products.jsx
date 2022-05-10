@@ -19,7 +19,11 @@ const TitleContainer = styled.div`
   padding-top: 30px;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size: 20px;
+  font-family: "Gibson";
+  font-weight: 250;
+`;
 
 const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
@@ -69,7 +73,7 @@ const Products = ({ cat, filters, sort }) => {
   return (
     <>
       <TitleContainer>
-        <Title>Shop</Title>
+        <Title>Explore</Title>
       </TitleContainer>
       <Container>
         {cat
@@ -77,7 +81,7 @@ const Products = ({ cat, filters, sort }) => {
               <Product item={item} key={item._id} />
             ))
           : products
-              .slice(0, 8)
+              .slice(0, 4)
               .map((item) => <Product item={item} key={item._id} />)}
       </Container>
     </>

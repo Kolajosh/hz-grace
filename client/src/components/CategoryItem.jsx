@@ -5,7 +5,7 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   flex: 1;
   margin: 7px;
-  height: 70vh;
+  height: 100vh;
   position: relative;
 `;
 
@@ -14,7 +14,6 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   ${mobile({ height: "20vh" })}
-
 `;
 
 const Info = styled.div`
@@ -30,29 +29,34 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-    color:white;
-    margin-bottom: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 20px;
 `;
 
 const Button = styled.button`
-    border:none;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    color:gray;
-    cursor: pointer;
-    font-weight: 600;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  border: none;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: gray;
+  cursor: pointer;
 `;
 
 const CategoryItem = ({ item }) => {
   return (
     <Container>
       <Link to={`/products/${item.cat}`}>
-      <Image src={item.img} />
-      <Info>
-        <Title>{item.title}</Title>
-        <Button>VIEW</Button>
-      </Info>
+        <Image src={item.img} />
+        <Info>
+          <Title>{item.title}</Title>
+          <Button>VIEW</Button>
+        </Info>
       </Link>
     </Container>
   );

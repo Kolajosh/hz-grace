@@ -17,7 +17,11 @@ const TitleContainer = styled.div`
   padding-top: 30px;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-family: "Gibson";
+  font-weight: 250;
+  font-size: 20px;
+`;
 
 const Categories = () => {
   return (

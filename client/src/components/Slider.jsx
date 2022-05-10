@@ -55,8 +55,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover
-
+  object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
@@ -69,21 +68,25 @@ const InfoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index:2;
+  z-index: 2;
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
   color: white;
 `;
 
 const Desc = styled.p`
   margin: 50px 0px;
   font-size: 20px;
-  font-weight: 500;
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: 250;
   letter-spacing: 3px;
   color: white;
-
 `;
 
 const Button = styled.button`
