@@ -1,5 +1,5 @@
 import { Add, Remove } from "@material-ui/icons";
-import './Cart.css'
+import "./Cart.css";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -200,7 +200,8 @@ const Cart = () => {
     const initializePayment = usePaystackPayment(config);
     return (
       <div>
-        <button className="paystack-button"
+        <button
+          className="paystack-button"
           onClick={() => {
             initializePayment(onSuccess, onClose);
           }}
@@ -262,8 +263,7 @@ const Cart = () => {
         <Title>YOUR BAG</Title>
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
-          <TopTexts>
-          </TopTexts>
+          <TopTexts></TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
@@ -317,9 +317,8 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>${cart.total}</SummaryItemPrice>
             </SummaryItem>
-            
-              <PaystackHookExample />
-            
+
+            <PaystackHookExample />
           </Summary>
         </Bottom>
       </Wrapper>

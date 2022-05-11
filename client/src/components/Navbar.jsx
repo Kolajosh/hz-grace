@@ -4,12 +4,14 @@ import {
   Search,
   ShoppingCartOutlined,
   PersonOutlineOutlined,
+  ExitToAppSharp,
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { logout } from "../redux/apiCalls";
 
 const Container = styled.div`
   height: 60px;
@@ -64,6 +66,7 @@ const Logo = styled.h1`
 const Right = styled.div`
   flex: 1;
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
@@ -72,14 +75,19 @@ const Right = styled.div`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
-  margin-left: 25px;
   text-decoration: none;
   link
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {
+  const disapatch = useDispatch();
   const quantity = useSelector((state) => state.cart.quantity);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    logout(disapatch);
+  };
   return (
     <>
       <Container>
@@ -100,7 +108,7 @@ const Navbar = () => {
                 <PersonOutlineOutlined />
               </button>
               <div className="dropdown-content">
-                <a href="/register">Login</a>
+                <a href="/login">Login</a>
                 <a href="/register">Register</a>
               </div>
             </div>
@@ -110,13 +118,17 @@ const Navbar = () => {
           <Link to="/login" style={{ textDecoration: "none" }}>
             <MenuItem>SIGN IN</MenuItem>
           </Link> */}
-            <Link to="/cart">
-              <MenuItem>
-                <Badge badgeContent={quantity} color="primary">
+
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <Link to="/cart">
                   <ShoppingCartOutlined />
-                </Badge>
-              </MenuItem>
-            </Link>
+                </Link>
+              </Badge>
+            </MenuItem>
+            <button className="dropbtn" onClick={handleClick}>
+              <ExitToAppSharp />
+            </button>
           </Right>
         </Wrapper>
       </Container>

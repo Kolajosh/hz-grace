@@ -22,6 +22,7 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/products", productRoute);
@@ -31,5 +32,5 @@ app.use("/api/checkout", stripeRoute);
 app.use("/api/payment", paymentRoute);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log("Backend server running");
+  console.log("Backend server is running");
 });

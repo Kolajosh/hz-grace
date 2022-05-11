@@ -9,7 +9,8 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 
 const Container = styled.div``;
 
@@ -149,6 +150,8 @@ const Product = () => {
       setQuantity(quantity + 1);
     }
   };
+  const user = useSelector((state) => state.user.currentUser);
+  const TOKEN = user.accessToken;
 
   const handleClick = () => {
     //update cart

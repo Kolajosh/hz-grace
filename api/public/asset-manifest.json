@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.baa8dbe6.css",
+    "main.js": "/static/js/main.53a34594.js",
+    "static/media/hero1.png": "/static/media/hero1.97cb49cfd42880921594.png",
+    "static/media/homeslide2.png": "/static/media/homeslide2.aaf2e69d1fbee71deef1.png",
+    "static/media/homeslide.png": "/static/media/homeslide.ea014e042960a1e23339.png",
+    "static/media/homeslide1.png": "/static/media/homeslide1.8c24a50e701f247cc75f.png",
+    "static/media/accessories.png": "/static/media/accessories.d9ec763899c70f3f76bf.png",
+    "static/media/dinnergown.png": "/static/media/dinnergown.80913f1f96916087723b.png",
+    "static/media/homewears.png": "/static/media/homewears.cc97dc4e6fd87dc898dc.png",
+    "index.html": "/index.html",
+    "main.baa8dbe6.css.map": "/static/css/main.baa8dbe6.css.map",
+    "main.53a34594.js.map": "/static/js/main.53a34594.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.baa8dbe6.css",
+    "static/js/main.53a34594.js"
+  ]
+}
